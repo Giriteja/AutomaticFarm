@@ -1,0 +1,92 @@
+
+<html>
+<title>QRP</title>
+<!-- stylesheets -->
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">// <![CDATA[
+        function loading(){
+            $("#loading").show();
+            $("#content").hide();       
+        }
+// ]]></script>
+
+</head>
+<body>
+<style>
+input[type=submit]{
+  background-color: #ff6600;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  margin: 2px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+input[type=file]{
+  border: none;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 150px;
+}
+body {
+ background-image: url("/static/image2.jpg");
+ background-repeat: no-repeat;
+ 
+ width: 100%;
+ background-color: #00cc99;
+ background-position: center;
+ background-size: contain;
+}
+h1{
+margin-top: 160px;
+}
+div#loading {
+    width: 135px;
+    height: 135px;
+    display: none;
+    background: url(/static/ajax-loader2.gif) no-repeat;
+    cursor: wait;
+	margin-top: 300px;
+    }
+input[type=text] {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 6px 0;
+  box-sizing: border-box;
+}
+
+input[type=number] {
+  width: 5%;
+  padding: 12px 20px;
+  margin: 6px 0;
+  box-sizing: border-box;
+}
+
+
+</style>
+
+<center>
+<div id="loading">
+
+</div>
+<div id="content">
+  
+    <h1 style="color:white;">Quixy Automatic Form Creator</h1>
+    <br>
+    <form action="" method=post enctype=multipart/form-data>
+	  <center>
+      <input type=file name=file[] multiple=""><br />
+	  <br>
+      <input type=submit value=Upload align="left" onclick="loading();"><br /><br />
+    
+</form>
+    </form>
+	{% block content %}{% endblock %}
+	<h4 style="color:red;">Note: Choose Resumes with .png or .jpeg and click Upload</h4>
+	
+</div>
+</body>
+</html>
