@@ -5,7 +5,7 @@ Flask==1.0.2
 Flask-Cors==3.0.7
 Flask-JWT-Simple==0.0.3
 pandas==0.25.1
-Werkzeug==0.15.4
+Werkzeug==0.16.0
 azure-cognitiveservices-vision-customvision==3.1.0
 azure-common==1.1.26
 azure-core==1.12.0

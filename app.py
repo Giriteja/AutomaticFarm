@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, request, redirect, url_for,send_file
-from werkzeug import secure_filename
+from werkzeug.utils import secure_filename
 import time
 import uuid
 import base64
@@ -617,7 +617,7 @@ def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'],
                                filename)
 
-from werkzeug import SharedDataMiddleware
+from werkzeug.middleware.shared_data import SharedDataMiddleware
 app.add_url_rule('/uploads/<filename>', 'uploaded_file',
                  build_only=True)
 app.wsgi_app = SharedDataMiddleware(app.wsgi_app, {
