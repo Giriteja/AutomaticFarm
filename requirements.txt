@@ -11,3 +11,4 @@ azure-common==1.1.26
 azure-core==1.12.0
 Pillow==8.0.1
 opencv-python-headless==4.2.0.32
+gunicorn
